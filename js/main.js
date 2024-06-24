@@ -2,7 +2,7 @@ $(window).on("load", function () {
   $("body").removeClass("overflow");
 });
 $(document).ready(function () {
-  /***** main slider *****/
+  /***** side Menu *****/
   $(".menu-btn").on("click", (e) => {
     if (e.isDefaultPrevented()) return;
     e.preventDefault();
@@ -19,6 +19,21 @@ $(document).ready(function () {
     $(".overlay").fadeOut(500);
     $(".header-nav").removeClass("active");
     $("body").removeClass("overflow");
+  });
+
+  /***** search *****/
+  $(".search-trigger").on("click", (e) => {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $(".search-section").slideToggle();
+  });
+
+  $(".close-search").on("click", (e) => {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $(".search-section").slideUp();
   });
 
   /***** main slider *****/

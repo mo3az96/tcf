@@ -20,6 +20,24 @@ $(document).ready(function () {
     $(".header-nav").removeClass("active");
     $("body").removeClass("overflow");
   });
+  /***** side Cart *****/
+  $(".cart-icon").on("click", (e) => {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $(".cartoverlay").fadeIn(500);
+    $(".cartList").addClass("active");
+    $("body").addClass("overflow");
+  });
+
+  $(".close-cart,.cartoverlay,.back-btn").on("click", (e) => {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $(".cartoverlay").fadeOut(500);
+    $(".cartList").removeClass("active");
+    $("body").removeClass("overflow");
+  });
 
   /***** search *****/
   $(".search-trigger").on("click", (e) => {

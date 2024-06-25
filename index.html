@@ -27,10 +27,15 @@
             <a href="#!" class="header-icon menu-btn">
               <i class="fa-light fa-bars"></i>
             </a>
-            <a href="#!" class="header-icon user-icon">
+            <button
+              role="button"
+              class="header-icon user-icon"
+              data-bs-toggle="modal"
+              data-bs-target="#signModal"
+            >
               <i class="fa-light fa-circle-user"></i>
               <span class="text"> حسابي </span>
-            </a>
+            </button>
             <a href="#!" class="header-icon whishlist-icon">
               <i class="fa-light fa-heart"></i>
             </a>
@@ -1219,6 +1224,44 @@
       </div>
     </footer>
     <!-- End Footer -->
+
+    <!-- Start Sign Modal -->
+    <div class="modal fade" id="signModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="sign-body">
+            <div class="login-form">
+              <h2 class="sign-title">تسجيل الدخول</h2>
+              <form>
+                <div class="form-group required">
+                  <label class="form-label">البريد الإلكتروني</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <div class="form-group required">
+                  <label class="form-label">كلمة المرور</label>
+                  <input type="password" class="form-control" />
+                </div>
+                <div class="form-footer">
+                  <button class="submit-btn">دخول</button>
+                  <a href="#!" class="forget-link">هل نسيت كلمة المرور؟</a>
+                </div>
+              </form>
+            </div>
+            <div class="register-content">
+              <h2 class="sign-title">ليس لديك حساب؟</h2>
+              <p class="register-description">
+                عند إنشاء حساب جديد بالمتجر يمكنك التسوق بحرية داخل المتجر
+                وتسجيل عمليات الشراء التي تقوم بها بالإضافة إلي الإستفادة من
+                مزايا المتجر مثل اضافة اكثر من عنوان للتوصيل، والإستفادة من
+                كوبونات التخفيض وغيرها
+              </p>
+              <a href="#!" class="register-btn">تسجيل جديد</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign Modal -->
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

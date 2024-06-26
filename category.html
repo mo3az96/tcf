@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
+    />
+    <title>TCF | Category</title>
+    <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- Start Header -->
+    <header class="header-section">
+      <div class="container">
+        <div class="header">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="TCF" class="img-contain" />
+          </a>
+          <div class="header-tools">
+            <a href="#!" class="header-icon menu-btn">
+              <i class="fa-light fa-bars"></i>
+            </a>
+            <button
+              role="button"
+              class="header-icon user-icon"
+              data-bs-toggle="modal"
+              data-bs-target="#signModal"
+            >
+              <i class="fa-light fa-circle-user"></i>
+              <span class="text"> حسابي </span>
+            </button>
+            <a href="#!" class="header-icon whishlist-icon">
+              <i class="fa-light fa-heart"></i>
+            </a>
+            <button class="header-icon cart-icon">
+              <i class="fa-sharp fa-light fa-cart-shopping"></i>
+            </button>
+            <button class="header-icon search-trigger">
+              <i class="fa-sharp fa-light fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+        <div class="overlay"></div>
+        <nav class="header-nav">
+          <div class="nav-head">
+            <div class="logo">
+              <img src="images/logo.png" alt="TCF" class="img-contain" />
+            </div>
+            <button class="header-icon close-btn">
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+          <ul>
+            <li><a href="index.html"> الرئيسية </a></li>
+            <li><a href="#!"> من نحن </a></li>
+            <li><a href="#!"> العروض </a></li>
+            <li><a href="category.html"> غرف معيشة </a></li>
+            <li><a href="category.html"> غرف نوم </a></li>
+            <li><a href="category.html"> غرف طعام </a></li>
+            <li><a href="category.html"> اثاث خارجي </a></li>
+            <li><a href="category.html"> قسم الديكورات والمفروشات </a></li>
+            <li><a href="category.html"> الطاولات والكراسي </a></li>
+            <li><a href="category.html"> التصميمات الداخلية </a></li>
+            <li><a href="#!"> اتصل بنا </a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="search-section">
+        <div class="container">
+          <div class="search-content">
+            <form class="search-form">
+              <input
+                type="search"
+                class="search-input"
+                placeholder="اكتب ما تبحث عنه"
+              />
+            </form>
+            <button class="close-search">
+              <i class="fa-light fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cartoverlay"></div>
+      <ul class="cartList">
+        <li>
+          <button class="close-cart">
+            <i class="fa-light fa-xmark"></i>
+          </button>
+        </li>
+        <!-- <li class="cart-empty">
+          <i class="fa-sharp fa-light fa-cart-shopping"></i>
+          عربة التسوق فارغة
+        </li> -->
+
+        <h2 class="cart-title">عربة التسوق</h2>
+        <li class="cart-products">
+          <div class="cart-product">
+            <a href="#!" class="product-img loading-img lazy-img-parent">
+              <img
+                data-src="images/products/1.jpg"
+                class="lazy-img img-contain"
+              />
+            </a>
+            <div class="product-information">
+              <h4 class="product-title">
+                <a href="single.html"> اسم المنتج </a>
+              </h4>
+              <div class="product-qty-price">
+                <span> x 1 </span>
+                <span> 98$ </span>
+              </div>
+              <button class="product-remove">
+                <i class="fa-solid fa-square-xmark"></i>
+              </button>
+            </div>
+          </div>
+          <div class="cart-product">
+            <a href="#!" class="product-img loading-img lazy-img-parent">
+              <img
+                data-src="images/products/2.jpg"
+                class="lazy-img img-contain"
+              />
+            </a>
+            <div class="product-information">
+              <h4 class="product-title">
+                <a href="single.html"> اسم المنتج </a>
+              </h4>
+              <div class="product-qty-price">
+                <span> x 1 </span>
+                <span> 98$ </span>
+              </div>
+              <button class="product-remove">
+                <i class="fa-solid fa-square-xmark"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="cart-tools">
+          <div class="cart-total">
+            <div class="total-item">
+              <strong>الإجمالي</strong>
+              <span> 98$ </span>
+            </div>
+          </div>
+          <div class="cart-buttons">
+            <button class="cart-btn back-btn">تابع التسوق</button>
+            <a href="cart.html" class="cart-btn checkout-btn"> إنهاء الطلب </a>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Breadcrumb -->
+    <section class="breadcrumb-section">
+      <div class="pattern">
+        <img src="images/breadcrumb.png" class="img-contain" />
+      </div>
+      <h1 class="page-title">قسم الكراسي</h1>
+      <ul class="breadcrumb-list">
+        <li>
+          <a href="index.html">الرئيسية</a>
+        </li>
+        <li><a href="#!"> المنتجات </a></li>
+        <li>قسم الكراسي</li>
+      </ul>
+    </section>
+    <!-- End Breadcrumb -->
+
+    <!-- Start Page -->
+    <section class="page-content category-page"></section>
+    <!-- End Page -->
+
+    <!-- Start Footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer">
+          <div class="footer-start">
+            <div class="footer-logo">
+              <img src="images/logo.png" class="img-contain" />
+            </div>
+            <p class="copyrights">جميع الحقوق محفوظة، مفهوم التأثيث 2024 ©</p>
+          </div>
+          <ul class="footer-list">
+            <li>
+              <a href="index.html">الرئيسية</a>
+            </li>
+            <li>
+              <a href="#!"> من نحن</a>
+            </li>
+            <li>
+              <a href="#!"> العروض</a>
+            </li>
+            <li>
+              <a href="category.html"> المنتجات</a>
+            </li>
+            <li>
+              <a href="#!"> اتصل بنا</a>
+            </li>
+          </ul>
+          <div class="footer-socials">
+            <a href="#!" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#!" target="_blank">
+              <i class="fa-brands fa-snapchat"></i>
+            </a>
+            <a href="#!" target="_blank">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#!" target="_blank">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <p class="copyrights mobile">
+          جميع الحقوق محفوظة، مفهوم التأثيث 2024 ©
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Start Sign Modal -->
+    <div class="modal fade" id="signModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="sign-body">
+            <div class="login-form">
+              <h2 class="sign-title">تسجيل الدخول</h2>
+              <form>
+                <div class="form-group required">
+                  <label class="form-label">البريد الإلكتروني</label>
+                  <input type="email" class="form-control" />
+                </div>
+                <div class="form-group required">
+                  <label class="form-label">كلمة المرور</label>
+                  <input type="password" class="form-control" />
+                </div>
+                <div class="form-footer">
+                  <button class="submit-btn">دخول</button>
+                  <a href="#!" class="forget-link">هل نسيت كلمة المرور؟</a>
+                </div>
+              </form>
+            </div>
+            <div class="register-content">
+              <h2 class="sign-title">ليس لديك حساب؟</h2>
+              <p class="register-description">
+                عند إنشاء حساب جديد بالمتجر يمكنك التسوق بحرية داخل المتجر
+                وتسجيل عمليات الشراء التي تقوم بها بالإضافة إلي الإستفادة من
+                مزايا المتجر مثل اضافة اكثر من عنوان للتوصيل، والإستفادة من
+                كوبونات التخفيض وغيرها
+              </p>
+              <a href="#!" class="register-btn">تسجيل جديد</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Sign Modal -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/lazyload.js"></script>
+    <script src="js/svg.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1399,6 +1399,73 @@ html[dir=ltr] .banner-item:hover .banner-btn {
   color: #303030;
 }
 
+.breadcrumb-section {
+  background-color: #f5f5f4;
+  padding: 50px 15px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.breadcrumb-section .pattern {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: calc(50% + 70px);
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .breadcrumb-section {
+    padding-block: 30px 25px;
+  }
+}
+
+.page-title {
+  font-size: 26px;
+  font-weight: 500;
+  color: #303030;
+  margin: 0 0;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .page-title {
+    font-size: 22px;
+  }
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  margin: 10px 0 0;
+}
+@media (max-width: 767px) {
+  .breadcrumb-list {
+    display: none;
+  }
+}
+.breadcrumb-list li {
+  font-size: 14px;
+  font-weight: 300;
+  color: #303030;
+}
+.breadcrumb-list li ~ li::before {
+  content: "/";
+  margin: 0 10px;
+}
+.breadcrumb-list li a {
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.breadcrumb-list li a:hover {
+  opacity: 0.8;
+}
+
+.page-content {
+  padding: 23px 0 100px;
+}
+
 footer {
   background-color: #303030;
   padding: 37px 0 50px;

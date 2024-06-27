@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/nouislider.min.css" />
+    <link rel="stylesheet" href="css/fancybox.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
@@ -179,7 +180,603 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Page -->
-    <section class="page-content single-page"></section>
+    <section class="page-content single-page">
+      <div class="container">
+        <div class="product-page-content">
+          <div class="product-row">
+            <div class="product-col main-col">
+              <div class="product-main-information">
+                <div class="product-images">
+                  <div class="images-slider">
+                    <div class="swiper productMainImage">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a
+                            href="images/products/1.jpg"
+                            data-fancybox="product"
+                            class="productMain-image loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/1.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="images/products/2.jpg"
+                            data-fancybox="product"
+                            class="productMain-image loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/2.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="images/products/3.jpg"
+                            data-fancybox="product"
+                            class="productMain-image loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/3.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="images/products/4.jpg"
+                            data-fancybox="product"
+                            class="productMain-image loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/4.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a
+                            href="images/products/5.jpg"
+                            data-fancybox="product"
+                            class="productMain-image loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/5.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper productThumbsImages">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div
+                            class="product-thumb loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/1.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div
+                            class="product-thumb loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/2.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div
+                            class="product-thumb loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/3.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div
+                            class="product-thumb loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/4.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div
+                            class="product-thumb loading-img lazy-img-parent"
+                          >
+                            <img
+                              data-src="images/products/5.jpg"
+                              class="img-contain lazy-img"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="product-information">
+                  <h2 class="product-name">Arne Jacobsen Swan Chair</h2>
+                  <div class="product-price">
+                    <del>1.950.00$</del><span>1,500.00$</span>
+                  </div>
+                  <div class="product-rate">
+                    <div class="stars">
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star active"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <button class="comments-count">(1 تقييم)</button>
+                  </div>
+                  <div class="product-quantity">
+                    <label class="product-label"> الكمية: </label>
+                    <div class="quantity-content">
+                      <input
+                        type="number"
+                        class="quantity"
+                        value="1"
+                        min="1"
+                        max="100"
+                        readonly
+                      />
+                      <button
+                        class="quantity-button plus"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                      >
+                        <i class="fa-solid fa-square-plus"></i>
+                      </button>
+                      <button
+                        class="quantity-button minus"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                      >
+                        <i class="fa-solid fa-square-minus"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="product-options">
+                    <div class="product-option">
+                      <label class="product-label"> اللون: </label>
+                      <div class="radios-option">
+                        <label class="option-radio">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#eb8a45"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #eb8a45"
+                          ></span>
+                        </label>
+                        <label class="option-radio">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#ef4199"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #ef4199"
+                          ></span>
+                        </label>
+                        <label class="option-radio">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#3c245e"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #3c245e"
+                          ></span>
+                        </label>
+                        <label class="option-radio">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#d7022e"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #d7022e"
+                          ></span>
+                        </label>
+                        <label class="option-radio">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#303030"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #303030"
+                          ></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-buttons">
+                    <button class="product-button cart">اضف إلي العربة</button>
+                    <button class="product-button whishlist">
+                      اضف إلي الرغبات
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="product-tabs">
+                <div class="nav product-nav-tabs">
+                  <button
+                    class="active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#product-description"
+                  >
+                    المواصفات
+                  </button>
+                  <button
+                    data-bs-toggle="tab"
+                    data-bs-target="#product-reviews"
+                  >
+                    التقييمات
+                  </button>
+                </div>
+
+                <div class="tab-content">
+                  <div
+                    class="tab-pane fade show active"
+                    id="product-description"
+                  >
+                    <div class="product-description">
+                      <p>
+                        هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد
+                        تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد
+                        مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة
+                        عدد الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد
+                        أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد
+                        الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء
+                        لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه
+                        الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على
+                        صورة حقيقية لتصميم الموقع. ومن هنا وجب على المصمم أن يضع
+                        نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور
+                        مولد النص العربى أن يوفر على المصمم عناء البحث عن نص
+                        بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر
+                        بشكل لا يليق. هذا النص يمكن أن يتم تركيبه على أي تصميم
+                        دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق،
+                        أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="product-reviews">
+                    <div class="reviews-list">
+                      <div class="review-item">
+                        <div class="review-header">
+                          <div class="user">
+                            <i class="fa-light fa-circle-user"></i>
+                            اسم العضو
+                          </div>
+                          <span class="review-date">08 فبراير 2018</span>
+                          <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                        <div class="review-body">
+                          <p>
+                            هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                            لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
+                            للنص
+                          </p>
+                        </div>
+                      </div>
+                      <div class="review-item">
+                        <div class="review-header">
+                          <div class="user">
+                            <i class="fa-light fa-circle-user"></i>
+                            اسم العضو
+                          </div>
+                          <span class="review-date">08 فبراير 2018</span>
+                          <div class="stars">
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star active"></i>
+                            <i class="fas fa-star"></i>
+                          </div>
+                        </div>
+                        <div class="review-body">
+                          <p>
+                            هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                            لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي
+                            للنص هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى
+                            المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل
+                            الخارجي للنص هناك حقيقة مثبتة منذ زمن طويل وهي أن
+                            المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على
+                            الشكل الخارجي للنص
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="reviews-form">
+                      <h3>اضف تقييماً</h3>
+                      <form>
+                        <div class="form-group required">
+                          <div class="ratestars">
+                            <input
+                              id="rate5"
+                              name="rating"
+                              type="radio"
+                              value="5"
+                            />
+                            <label class="revstar" for="rate5" title="5">
+                              <i class="fas fa-star"></i>
+                            </label>
+                            <input
+                              id="rate4"
+                              name="rating"
+                              type="radio"
+                              value="4"
+                            />
+                            <label class="revstar" for="rate4" title="4">
+                              <i class="fas fa-star"></i>
+                            </label>
+                            <input
+                              id="rate3"
+                              name="rating"
+                              type="radio"
+                              value="3"
+                            />
+                            <label class="revstar" for="rate3" title="3">
+                              <i class="fas fa-star"></i>
+                            </label>
+                            <input
+                              id="rate2"
+                              name="rating"
+                              type="radio"
+                              value="2"
+                            />
+                            <label class="revstar" for="rate2" title="2">
+                              <i class="fas fa-star"></i>
+                            </label>
+                            <input
+                              id="rate1"
+                              name="rating"
+                              type="radio"
+                              value="1"
+                            />
+                            <label class="revstar" for="rate1" title="1">
+                              <i class="fas fa-star"></i>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-grid">
+                          <div class="form-group required">
+                            <label class="form-label">الاسم الأول</label>
+                            <input type="password" class="form-control" />
+                          </div>
+                          <div class="form-group required">
+                            <label class="form-label">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="form-label">اضف تعليقك</label>
+                          <textarea class="form-control"></textarea>
+                        </div>
+                        <button class="submit-btn">إرسال</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-col side-col">
+              <div class="product-features">
+                <div class="product-feature-item">
+                  <div class="feature-icon">
+                    <i class="fa-sharp fa-regular fa-money-bill-1"></i>
+                  </div>
+                  <div class="feature-title">الدفع عند الإستلام</div>
+                </div>
+                <div class="product-feature-item">
+                  <div class="feature-icon">
+                    <i class="fas fa-right-left"></i>
+                  </div>
+                  <div class="feature-title">
+                    إسترجاع المنتج مجاناً خلال 14 يوم من تاريخ الإستلام
+                  </div>
+                </div>
+                <div class="product-feature-item">
+                  <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="feature-title">منتجات أصلية %100</div>
+                </div>
+              </div>
+              <a href="#!" class="side-banner loading-img lazy-img-parent">
+                <img
+                  data-src="images/banners/5.jpg"
+                  class="lazy-img img-cover"
+                />
+              </a>
+              <div class="side-banner loading-img lazy-img-parent">
+                <img
+                  data-src="images/banners/6.jpg"
+                  class="lazy-img img-cover"
+                />
+              </div>
+              <div class="side-banner loading-img lazy-img-parent">
+                <img
+                  data-src="images/banners/7.jpg"
+                  class="lazy-img img-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="related-section">
+          <div class="section-head">
+            <h2 class="section-title">منتجات مماثلة</h2>
+          </div>
+          <div class="related-slider">
+            <div class="products-slider custom-slider">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="product-item">
+                      <h3 class="product-title">
+                        <a href="single.html"> اسم المنتج </a>
+                      </h3>
+
+                      <a
+                        href="single.html"
+                        class="product-img loading-img lazy-img-parent"
+                      >
+                        <img
+                          data-src="images/products/6.jpg"
+                          class="lazy-img img-contain"
+                        />
+                      </a>
+
+                      <div class="product-price">
+                        <span> 98$ </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-item">
+                      <h3 class="product-title">
+                        <a href="single.html"> اسم المنتج </a>
+                      </h3>
+
+                      <a
+                        href="single.html"
+                        class="product-img loading-img lazy-img-parent"
+                      >
+                        <img
+                          data-src="images/products/7.jpg"
+                          class="lazy-img img-contain"
+                        />
+                      </a>
+
+                      <div class="product-price">
+                        <span> 98$ </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-item">
+                      <h3 class="product-title">
+                        <a href="single.html"> اسم المنتج </a>
+                      </h3>
+
+                      <a
+                        href="single.html"
+                        class="product-img loading-img lazy-img-parent"
+                      >
+                        <img
+                          data-src="images/products/8.jpg"
+                          class="lazy-img img-contain"
+                        />
+                      </a>
+
+                      <div class="product-price">
+                        <span> 98$ </span>
+                        <del>120$</del>
+                      </div>
+
+                      <div
+                        class="product-countdown"
+                        data-timer="2024-10-23T23:50:30+03:00"
+                      >
+                        <span class="hours">00</span>h :
+                        <span class="minutes"> 00 </span>m :
+                        <span class="seconds">00</span>s
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-item">
+                      <h3 class="product-title">
+                        <a href="single.html"> اسم المنتج </a>
+                      </h3>
+
+                      <a
+                        href="single.html"
+                        class="product-img loading-img lazy-img-parent"
+                      >
+                        <img
+                          data-src="images/products/9.jpg"
+                          class="lazy-img img-contain"
+                        />
+                      </a>
+
+                      <div class="product-price">
+                        <span> 98$ </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="product-item">
+                      <h3 class="product-title">
+                        <a href="single.html"> اسم المنتج </a>
+                      </h3>
+
+                      <a
+                        href="single.html"
+                        class="product-img loading-img lazy-img-parent"
+                      >
+                        <img
+                          data-src="images/products/10.jpg"
+                          class="lazy-img img-contain"
+                        />
+                      </a>
+
+                      <div class="product-price">
+                        <span> 98$ </span>
+                        <del>120$</del>
+                      </div>
+
+                      <div
+                        class="product-countdown"
+                        data-timer="2024-06-29T23:50:15+03:00"
+                      >
+                        <span class="hours">00</span>h :
+                        <span class="minutes"> 00 </span>m :
+                        <span class="seconds">00</span>s
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End Page -->
 
     <!-- Start Footer -->
@@ -273,6 +870,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/nouislider.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
     <script src="js/lazyload.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/main.js"></script>

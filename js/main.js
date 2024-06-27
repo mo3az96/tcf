@@ -342,7 +342,44 @@ $(document).ready(function () {
       },
     },
   });
-  /***** categories sliders *****/
+
+  /***** related sliders *****/
+  var relatedSwiper = new Swiper(".related-slider .swiper", {
+    loop: true,
+    speed: 500,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 15,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 24,
+      },
+    },
+    pagination: {
+      el: ".related-slider .swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+
+  /***** categories slider *****/
   var categoriesSwiper = new Swiper(".categories-slider .swiper", {
     loop: true,
     speed: 500,
@@ -469,41 +506,42 @@ $(document).ready(function () {
 
   /***** price range *****/
   var priceSlider = document.getElementById("price-slider");
+  if (priceSlider) {
+    var minPrice = parseInt($("#price-slider").data("min-price"));
+    var maxPrice = parseInt($("#price-slider").data("max-price"));
+    var sliderStart = [minPrice, maxPrice];
+    var range = {
+      min: minPrice,
+      max: maxPrice,
+    };
 
-  var minPrice = parseInt($("#price-slider").data("min-price"));
-  var maxPrice = parseInt($("#price-slider").data("max-price"));
-  var sliderStart = [minPrice, maxPrice];
-  var range = {
-    min: minPrice,
-    max: maxPrice,
-  };
-
-  var valuesinputs = [
-    document.getElementById("min-price"),
-    document.getElementById("max-price"),
-  ];
-  noUiSlider.create(priceSlider, {
-    start: sliderStart,
-    connect: true,
-    tooltips: [
-      {
-        to: function (value) {
-          return ~~value + "$";
+    var valuesinputs = [
+      document.getElementById("min-price"),
+      document.getElementById("max-price"),
+    ];
+    noUiSlider.create(priceSlider, {
+      start: sliderStart,
+      connect: true,
+      tooltips: [
+        {
+          to: function (value) {
+            return ~~value + "$";
+          },
         },
-      },
-      {
-        to: function (value) {
-          return ~~value + "$";
+        {
+          to: function (value) {
+            return ~~value + "$";
+          },
         },
-      },
-    ],
-    step: 1,
-    range: range,
-  });
+      ],
+      step: 1,
+      range: range,
+    });
 
-  priceSlider.noUiSlider.on("update", function (values, handle) {
-    valuesinputs[handle].value = values[handle];
-  });
+    priceSlider.noUiSlider.on("update", function (values, handle) {
+      valuesinputs[handle].value = values[handle];
+    });
+  }
 
   /***** Filters Trigger *****/
   $(".filter-trigger").on("click", (e) => {
@@ -511,5 +549,39 @@ $(document).ready(function () {
     e.preventDefault();
     e.stopPropagation();
     $(".category-aside").toggleClass("active");
+  });
+  /***** Product *****/
+  var productThumbsImagesSlider = new Swiper(".productThumbsImages", {
+    spaceBetween: 5,
+    slidesPerView: 4,
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+  var productMainImageSlider = new Swiper(".productMainImage", {
+    spaceBetween: 10,
+    thumbs: {
+      swiper: productThumbsImagesSlider,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
+  Fancybox.bind("[data-fancybox]");
+  $(".comments-count").on("click", (e) => {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $("html, body").animate(
+      {
+        scrollTop: $(".product-tabs").offset().top - 75,
+      },
+      1000
+    );
+    $("[data-bs-target='#product-reviews']").trigger("click");
   });
 });

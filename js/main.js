@@ -311,6 +311,37 @@ $(document).ready(function () {
     },
   });
 
+  /***** bestseller sliders *****/
+  var bestsellerSwiper = new Swiper(".bestseller-slider .swiper", {
+    loop: true,
+    speed: 500,
+    // autoplay: {
+    //   delay: 5000,
+    // },
+    breakpoints: {
+      0: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+    },
+    pagination: {
+      el: ".bestseller-slider .swiper-pagination",
+      clickable: true,
+    },
+    on: {
+      init: function (swiper) {
+        lazyLoad();
+      },
+    },
+  });
   /***** categories sliders *****/
   var categoriesSwiper = new Swiper(".categories-slider .swiper", {
     loop: true,
@@ -434,5 +465,51 @@ $(document).ready(function () {
         }
       }, 1000);
     }
+  });
+
+  /***** price range *****/
+  var priceSlider = document.getElementById("price-slider");
+
+  var minPrice = parseInt($("#price-slider").data("min-price"));
+  var maxPrice = parseInt($("#price-slider").data("max-price"));
+  var sliderStart = [minPrice, maxPrice];
+  var range = {
+    min: minPrice,
+    max: maxPrice,
+  };
+
+  var valuesinputs = [
+    document.getElementById("min-price"),
+    document.getElementById("max-price"),
+  ];
+  noUiSlider.create(priceSlider, {
+    start: sliderStart,
+    connect: true,
+    tooltips: [
+      {
+        to: function (value) {
+          return ~~value + "$";
+        },
+      },
+      {
+        to: function (value) {
+          return ~~value + "$";
+        },
+      },
+    ],
+    step: 1,
+    range: range,
+  });
+
+  priceSlider.noUiSlider.on("update", function (values, handle) {
+    valuesinputs[handle].value = values[handle];
+  });
+
+  /***** Filters Trigger *****/
+  $(".filter-trigger").on("click", (e) => {
+    if (e.isDefaultPrevented()) return;
+    e.preventDefault();
+    e.stopPropagation();
+    $(".category-aside").toggleClass("active");
   });
 });

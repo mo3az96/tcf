@@ -97,12 +97,12 @@
             <i class="fa-light fa-xmark"></i>
           </button>
         </li>
-        <!-- <li class="cart-empty">
+        <li class="cart-empty">
           <i class="fa-sharp fa-light fa-cart-shopping"></i>
           عربة التسوق فارغة
-        </li> -->
+        </li>
 
-        <h2 class="cart-title">عربة التسوق</h2>
+        <!-- <h2 class="cart-title">عربة التسوق</h2>
         <li class="cart-products">
           <div class="cart-product">
             <a href="#!" class="product-img loading-img lazy-img-parent">
@@ -156,7 +156,7 @@
             <button class="cart-btn back-btn">تابع التسوق</button>
             <a href="cart.html" class="cart-btn checkout-btn"> إنهاء الطلب </a>
           </div>
-        </li>
+        </li> -->
       </ul>
     </header>
     <!-- End Header -->
@@ -178,7 +178,598 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Page -->
-    <section class="page-content category-page"></section>
+    <section class="page-content category-page">
+      <div class="container">
+        <div class="category-page-content">
+          <div class="category-row">
+            <div class="category-col side-col">
+              <div class="category-aside">
+                <button class="filter-trigger">
+                  <i class="fa-solid fa-filter-list"></i>
+                </button>
+                <div class="side-filters">
+                  <div class="categories-list">
+                    <h3>أقسام المنتجات</h3>
+                    <ul>
+                      <li>
+                        <a href="category.html">قسم الكراسي</a>
+                      </li>
+                      <li>
+                        <a href="category.html">قسم المناضد</a>
+                      </li>
+                      <li>
+                        <a href="category.html">قسم الكنب</a>
+                      </li>
+                      <li>
+                        <a href="category.html">قسم الديكورات</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="filters-list">
+                    <div class="side-filter">
+                      <h4 class="filter-title">البحث</h4>
+                      <div class="search-content">
+                        <input type="search" class="form-control" />
+                        <button class="search-btn">
+                          <i class="fa-light fa-magnifying-glass"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="side-filter">
+                      <h4 class="filter-title">السعر</h4>
+                      <div class="price-filter">
+                        <div
+                          id="price-slider"
+                          class="price-slider"
+                          data-min-price="0"
+                          data-max-price="500"
+                        ></div>
+                        <div class="values-inputs">
+                          <input
+                            id="min-price"
+                            type="number"
+                            class="min-price"
+                          />
+                          <input
+                            id="max-price"
+                            type="number"
+                            class="max-price"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="side-filter">
+                      <h4 class="filter-title">اللون</h4>
+                      <div class="color-filter">
+                        <label class="color-pick">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="none"
+                            class="color-check"
+                          />
+                          <span class="color none light-color"></span>
+                        </label>
+                        <label class="color-pick">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#eb8a45"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #eb8a45"
+                          ></span>
+                        </label>
+                        <label class="color-pick">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#ef4199"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #ef4199"
+                          ></span>
+                        </label>
+                        <label class="color-pick">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#3c245e"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #3c245e"
+                          ></span>
+                        </label>
+                        <label class="color-pick">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#d7022e"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #d7022e"
+                          ></span>
+                        </label>
+                        <label class="color-pick">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#ffffff"
+                            class="color-check"
+                          />
+                          <span
+                            class="color light-color"
+                            style="background-color: #ffffff"
+                          ></span>
+                        </label>
+                        <label class="color-pick">
+                          <input
+                            type="radio"
+                            name="color"
+                            value="#303030"
+                            class="color-check"
+                          />
+                          <span
+                            class="color"
+                            style="background-color: #303030"
+                          ></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="side-filter">
+                      <h4 class="filter-title">التقييم</h4>
+                      <div class="rate-picker">
+                        <input
+                          id="rate5"
+                          name="rating"
+                          type="radio"
+                          value="5"
+                        />
+                        <label class="revstar" for="rate5" title="5">
+                          <i class="fas fa-star"></i>
+                        </label>
+                        <input
+                          id="rate4"
+                          name="rating"
+                          type="radio"
+                          value="4"
+                        />
+                        <label class="revstar" for="rate4" title="4">
+                          <i class="fas fa-star"></i>
+                        </label>
+                        <input
+                          id="rate3"
+                          name="rating"
+                          type="radio"
+                          value="3"
+                        />
+                        <label class="revstar" for="rate3" title="3">
+                          <i class="fas fa-star"></i>
+                        </label>
+                        <input
+                          id="rate2"
+                          name="rating"
+                          type="radio"
+                          value="2"
+                        />
+                        <label class="revstar" for="rate2" title="2">
+                          <i class="fas fa-star"></i>
+                        </label>
+                        <input
+                          id="rate1"
+                          name="rating"
+                          type="radio"
+                          value="1"
+                        />
+                        <label class="revstar" for="rate1" title="1">
+                          <i class="fas fa-star"></i>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="side-banner loading-img lazy-img-parent">
+                <img
+                  data-src="images/banners/5.jpg"
+                  class="lazy-img img-cover"
+                />
+              </div>
+              <div class="bestseller-section">
+                <h4 class="bestseller-title">الأكثر مبيعاً</h4>
+                <div class="bestseller-slider">
+                  <div class="products-slider custom-slider">
+                    <div class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="product-item">
+                            <h3 class="product-title">
+                              <a href="single.html"> اسم المنتج </a>
+                            </h3>
+
+                            <a
+                              href="single.html"
+                              class="product-img loading-img lazy-img-parent"
+                            >
+                              <img
+                                data-src="images/products/1.jpg"
+                                class="lazy-img img-contain"
+                              />
+                            </a>
+
+                            <div class="product-price">
+                              <span> 98$ </span>
+                              <del>120$</del>
+                            </div>
+
+                            <div
+                              class="product-countdown"
+                              data-timer="2024-08-23T23:50:00+03:00"
+                            >
+                              <span class="hours">00</span>h :
+                              <span class="minutes"> 00 </span>m :
+                              <span class="seconds">00</span>s
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="product-item">
+                            <h3 class="product-title">
+                              <a href="single.html"> اسم المنتج </a>
+                            </h3>
+
+                            <a
+                              href="single.html"
+                              class="product-img loading-img lazy-img-parent"
+                            >
+                              <img
+                                data-src="images/products/2.jpg"
+                                class="lazy-img img-contain"
+                              />
+                            </a>
+
+                            <div class="product-price">
+                              <span> 98$ </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="product-item">
+                            <h3 class="product-title">
+                              <a href="single.html"> اسم المنتج </a>
+                            </h3>
+
+                            <a
+                              href="single.html"
+                              class="product-img loading-img lazy-img-parent"
+                            >
+                              <img
+                                data-src="images/products/3.jpg"
+                                class="lazy-img img-contain"
+                              />
+                            </a>
+
+                            <div class="product-price">
+                              <span> 98$ </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="category-col main-col">
+              <div class="category-content">
+                <div class="category-banner loading-img lazy-img-parent">
+                  <img
+                    data-src="images/banners/4.jpg"
+                    class="lazy-img img-cover"
+                  />
+                </div>
+                <h2 class="categoryPage-title">الكراسي</h2>
+                <div class="display-options">
+                  <p class="displayed-items">عرض 9-1 من 18 نتيجة</p>
+                  <div class="display-selects">
+                    <div class="display-select sort-select">
+                      <label class="display-label"> الفرز حسب </label>
+                      <select class="form-control">
+                        <option value="1">الأحدث</option>
+                        <option value="2">الأقدم</option>
+                        <option value="3">الأعلى سعر</option>
+                        <option value="4">الأقل سعر</option>
+                        <option value="5">الأعلى تقييم</option>
+                      </select>
+                    </div>
+                    <div class="display-select count-select">
+                      <label class="display-label"> عرض </label>
+                      <select class="form-control">
+                        <option value="1">9</option>
+                        <option value="2">12</option>
+                        <option value="3">16</option>
+                        <option value="4">18</option>
+                        <option value="5">24</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="products-grid">
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/1.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                      <del>120$</del>
+                    </div>
+
+                    <div
+                      class="product-countdown"
+                      data-timer="2024-08-23T23:50:00+03:00"
+                    >
+                      <span class="hours">00</span>h :
+                      <span class="minutes"> 00 </span>m :
+                      <span class="seconds">00</span>s
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/2.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/3.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/4.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/5.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                      <del>120$</del>
+                    </div>
+
+                    <div
+                      class="product-countdown"
+                      data-timer="2024-08-23T23:50:00+03:00"
+                    >
+                      <span class="hours">00</span>h :
+                      <span class="minutes"> 00 </span>m :
+                      <span class="seconds">00</span>s
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/6.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/7.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/8.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/9.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                      <del>120$</del>
+                    </div>
+
+                    <div
+                      class="product-countdown"
+                      data-timer="2024-08-23T23:50:00+03:00"
+                    >
+                      <span class="hours">00</span>h :
+                      <span class="minutes"> 00 </span>m :
+                      <span class="seconds">00</span>s
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/10.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/11.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                  <div class="product-item">
+                    <h3 class="product-title">
+                      <a href="single.html"> اسم المنتج </a>
+                    </h3>
+
+                    <a
+                      href="single.html"
+                      class="product-img loading-img lazy-img-parent"
+                    >
+                      <img
+                        data-src="images/products/12.jpg"
+                        class="lazy-img img-contain"
+                      />
+                    </a>
+
+                    <div class="product-price">
+                      <span> 98$ </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- End Page -->
 
     <!-- Start Footer -->

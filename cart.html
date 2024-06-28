@@ -172,7 +172,143 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Page -->
-    <section class="page-content cart-page"></section>
+    <section class="page-content cart-page">
+      <div class="container">
+        <div class="cart-table">
+          <div class="cart-table-head cart-table-row">
+            <div class="cart-table-cell table-head-item product-table-product">
+              المنتجات
+            </div>
+            <div class="cart-table-cell table-head-item product-table-price">
+              السعر
+            </div>
+            <div class="cart-table-cell table-head-item product-table-quantity">
+              الكمية
+            </div>
+            <div class="cart-table-cell table-head-item product-table-total">
+              الإجمالي
+            </div>
+          </div>
+          <div class="cart-table-item cart-table-row">
+            <div class="cart-table-cell product-table-product">
+              <div class="cart-product-content">
+                <a class="product-img loading-img lazy-img-parent">
+                  <img
+                    data-src="images/products/1.jpg"
+                    class="lazy-img img-contain"
+                  />
+                </a>
+                <a class="product-title" href="single.html"> اسم المنتج </a>
+              </div>
+            </div>
+            <div class="cart-table-cell product-table-price">
+              <span class="product-price"> 98.00 $ </span>
+            </div>
+            <div class="cart-table-cell product-table-quantity">
+              <div class="product-quantity">
+                <input
+                  type="number"
+                  class="quantity"
+                  value="1"
+                  min="1"
+                  max="100"
+                  readonly
+                />
+                <button
+                  class="quantity-button plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                >
+                  <i class="fa-solid fa-square-plus"></i>
+                </button>
+                <button
+                  class="quantity-button minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                >
+                  <i class="fa-solid fa-square-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="cart-table-cell product-table-total">
+              <span class="product-price"> 98.00 $ </span>
+            </div>
+            <button class="product-remove">
+              <i class="fa-solid fa-square-xmark"></i>
+            </button>
+          </div>
+          <div class="cart-table-item cart-table-row">
+            <div class="cart-table-cell product-table-product">
+              <div class="cart-product-content">
+                <a class="product-img loading-img lazy-img-parent">
+                  <img
+                    data-src="images/products/2.jpg"
+                    class="lazy-img img-contain"
+                  />
+                </a>
+                <a class="product-title" href="single.html"> اسم المنتج </a>
+              </div>
+            </div>
+            <div class="cart-table-cell product-table-price">
+              <span class="product-price"> 98.00 $ </span>
+            </div>
+            <div class="cart-table-cell product-table-quantity">
+              <div class="product-quantity">
+                <input
+                  type="number"
+                  class="quantity"
+                  value="1"
+                  min="1"
+                  max="100"
+                  readonly
+                />
+                <button
+                  class="quantity-button plus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                >
+                  <i class="fa-solid fa-square-plus"></i>
+                </button>
+                <button
+                  class="quantity-button minus"
+                  onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                >
+                  <i class="fa-solid fa-square-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="cart-table-cell product-table-total">
+              <span class="product-price"> 98.00 $ </span>
+            </div>
+            <button class="product-remove">
+              <i class="fa-solid fa-square-xmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="cart-coupon">
+          <label class="form-label">ادخل كود كوبون التخفيض</label>
+          <div class="coupon-content">
+            <input type="text" class="form-control" />
+            <button class="coupon-btn">تحديث</button>
+          </div>
+        </div>
+        <div class="cart-totals">
+          <div class="cart-total-item">
+            <span class="cart-total-title">الإجمالي</span>
+            <span class="cart-total-value">98.00 $</span>
+          </div>
+          <div class="cart-total-item">
+            <span class="cart-total-title">تكلفة الشحن</span>
+            <span class="cart-total-value">5.00 $</span>
+          </div>
+          <div class="cart-total-item">
+            <span class="cart-total-title">إجمالي الطلب</span>
+            <span class="cart-total-value">103.00 $</span>
+          </div>
+        </div>
+        <div class="cart-buttons">
+          <button class="cart-btn back-btn">تابع التسوق</button>
+          <a href="checkout.html" class="cart-btn checkout-btn">إنهاء الطلب </a>
+        </div>
+      </div>
+    </section>
     <!-- End Page -->
 
     <!-- Start Footer -->

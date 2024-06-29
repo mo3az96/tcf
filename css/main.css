@@ -1863,7 +1863,7 @@ html[dir=ltr] .categories-list ul a:hover:after {
   grid-template-columns: 1fr 1fr;
   gap: 7px;
 }
-.cartList .cart-btn {
+.cartList .cart-buttons .cart-btn {
   height: 45px;
   display: flex;
   align-items: center;
@@ -1873,18 +1873,23 @@ html[dir=ltr] .categories-list ul a:hover:after {
   font-weight: 400;
   transition: all 0.3s ease-in-out;
 }
-.cartList .cart-btn.back-btn {
+.cartList .cart-buttons .cart-btn.back-btn {
   background-color: #fff;
   color: #303030;
 }
-.cartList .cart-btn.checkout-btn {
+.cartList .cart-buttons .cart-btn.checkout-btn {
   background-color: #303030;
   color: #fff;
 }
-.cartList .cart-btn:hover {
+.cartList .cart-buttons .cart-btn:hover {
   border-color: #9d9d9d;
   background-color: #9d9d9d;
   color: #303030;
+}
+@media (max-width: 767px) {
+  .cartList .cart-buttons .cart-btn {
+    width: 100%;
+  }
 }
 
 .breadcrumb-section {

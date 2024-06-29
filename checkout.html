@@ -172,7 +172,244 @@
     <!-- End Breadcrumb -->
 
     <!-- Start Page -->
-    <section class="page-content cart-page"></section>
+    <section class="page-content checkout-page">
+      <div class="container">
+        <div class="checkout-row">
+          <div class="checkout-col">
+            <div class="checkout-panel">
+              <h3 class="panel-title">
+                <i class="fas fa-home"></i>
+                بيانات التوصيل
+              </h3>
+              <div class="panel-body">
+                <div class="form-grid">
+                  <div class="form-group required">
+                    <label class="form-label">الاسم الأول</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group required">
+                    <label class="form-label">الاسم الأخير</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <label class="form-label">رقم الجوال</label>
+                  <input type="tel" class="form-control" />
+                </div>
+                <div class="form-group required">
+                  <label class="form-label">العنوان بالتفصيل</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">ملاحظات مع الطلب</label>
+                  <textarea class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-panel">
+              <h3 class="panel-title">
+                <i class="fas fa-percentage"></i>
+                كوبون التخفيض
+              </h3>
+              <div class="panel-body">
+                <div class="cart-coupon">
+                  <label class="form-label">ادخل الكود</label>
+                  <div class="coupon-content">
+                    <input type="text" class="form-control" />
+                    <button class="coupon-btn">تحديث</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-col">
+            <div class="checkout-panel">
+              <h3 class="panel-title">
+                <i class="fas fa-truck"></i>
+                طريقة الشحن
+              </h3>
+              <div class="panel-body">
+                <div class="cart-shipping">
+                  <div class="checkout-radio">
+                    <label class="radio">
+                      <input type="radio" name="shipping" />
+                      <span class="mark"></span>
+                      <span class="text">أرامكس (5$)</span>
+                    </label>
+                  </div>
+                  <div class="checkout-radio">
+                    <label class="radio">
+                      <input type="radio" name="shipping" />
+                      <span class="mark"></span>
+                      <span class="text">فيديكس (6$)</span>
+                    </label>
+                  </div>
+                  <div class="checkout-radio">
+                    <label class="radio">
+                      <input type="radio" name="shipping" />
+                      <span class="mark"></span>
+                      <span class="text">دي اتش ال (7$)</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-panel">
+              <h3 class="panel-title">
+                <i class="fas fa-credit-card"></i>
+                طريقة الدفع
+              </h3>
+              <div class="panel-body">
+                <div class="cart-payment">
+                  <div class="checkout-radio">
+                    <label class="radio">
+                      <input type="radio" name="payment" />
+                      <span class="mark"></span>
+                      <span class="text">تحويل بنكي</span>
+                    </label>
+                    <p class="radio-info">
+                      اسم البنك: البنك الأهلي<br />
+                      x0000000000000 :رقم الحساب اسم<br />
+                      الحساب: مفهوم التأثيث
+                    </p>
+                  </div>
+                  <div class="checkout-radio">
+                    <label class="radio">
+                      <input type="radio" name="payment" />
+                      <span class="mark"></span>
+                      <span class="text">بطاقة ائتمان</span>
+                    </label>
+                  </div>
+                  <div class="checkout-radio">
+                    <label class="radio">
+                      <input type="radio" name="payment" />
+                      <span class="mark"></span>
+                      <span class="text">الدفع عند الإستلام</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-panel">
+              <h3 class="panel-title">
+                <i class="fas fa-shopping-cart"></i>
+                تفاصيل الطلب
+              </h3>
+              <div class="panel-body">
+                <div class="checkout-table">
+                  <div class="checkout-table-head checkout-table-row">
+                    <div
+                      class="checkout-table-cell table-head-item product-table-product"
+                    >
+                      المنتجات
+                    </div>
+                    <div
+                      class="checkout-table-cell table-head-item product-table-quantity"
+                    >
+                      الكمية
+                    </div>
+                    <div
+                      class="checkout-table-cell table-head-item product-table-total"
+                    >
+                      الإجمالي
+                    </div>
+                  </div>
+                  <div class="checkout-table-item checkout-table-row">
+                    <div class="checkout-table-cell product-table-product">
+                      <div class="checkout-product-content">
+                        <a class="product-title" href="single.html">
+                          اسم المنتج
+                        </a>
+                      </div>
+                    </div>
+                    <div class="checkout-table-cell product-table-quantity">
+                      <div class="product-quantity">
+                        <input
+                          type="number"
+                          class="quantity"
+                          value="1"
+                          min="1"
+                          max="100"
+                          readonly
+                        />
+                        <button
+                          class="quantity-button plus"
+                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        >
+                          <i class="fa-solid fa-square-plus"></i>
+                        </button>
+                        <button
+                          class="quantity-button minus"
+                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        >
+                          <i class="fa-solid fa-square-minus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="checkout-table-cell product-table-total">
+                      <span class="product-price"> 98.00 $ </span>
+                    </div>
+                  </div>
+                  <div class="checkout-table-item checkout-table-row">
+                    <div class="checkout-table-cell product-table-product">
+                      <div class="checkout-product-content">
+                        <a class="product-title" href="single.html">
+                          اسم المنتج
+                        </a>
+                      </div>
+                    </div>
+                    <div class="checkout-table-cell product-table-quantity">
+                      <div class="product-quantity">
+                        <input
+                          type="number"
+                          class="quantity"
+                          value="1"
+                          min="1"
+                          max="100"
+                          readonly
+                        />
+                        <button
+                          class="quantity-button plus"
+                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                        >
+                          <i class="fa-solid fa-square-plus"></i>
+                        </button>
+                        <button
+                          class="quantity-button minus"
+                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                        >
+                          <i class="fa-solid fa-square-minus"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="checkout-table-cell product-table-total">
+                      <span class="product-price"> 98.00 $ </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cart-totals">
+                  <div class="cart-total-item">
+                    <span class="cart-total-title">الإجمالي</span>
+                    <span class="cart-total-value">98.00 $</span>
+                  </div>
+                  <div class="cart-total-item">
+                    <span class="cart-total-title">تكلفة الشحن</span>
+                    <span class="cart-total-value">5.00 $</span>
+                  </div>
+                  <div class="cart-total-item">
+                    <span class="cart-total-title">إجمالي الطلب</span>
+                    <span class="cart-total-value">103.00 $</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-buttons">
+          <button class="cart-btn checkout-btn">إنهاء الطلب</button>
+        </div>
+      </div>
+    </section>
     <!-- End Page -->
 
     <!-- Start Footer -->
